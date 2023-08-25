@@ -1,4 +1,3 @@
-import pyaudio
 
 
 def initialize_stream(p, format, channels, rate, chunk_size):
