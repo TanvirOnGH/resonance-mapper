@@ -14,6 +14,8 @@ Intended for Eye-Candy Purposes.
 '''
 
 # TODO: Daemonize
+
+
 def flash_window_on_bass():
     try:
         with AudioManager() as audio_manager:
