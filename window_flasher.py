@@ -15,7 +15,7 @@ Intended for Eye-Candy Purposes.
 def main():
     def process_callback(sound_class):
         if sound_class == "bass":
-            execute(FLASH_WINDOW_COMMAND, text=False)
+            execute(FLASH_WINDOW_COMMAND, text=False, check=True)
 
     process_audio(process_callback)
 
