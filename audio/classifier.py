@@ -2,7 +2,7 @@ import numpy as np
 from constants import FREQUENCY_RANGES
 
 
-def classify_sound(audio_data, rate):
+def classify_audio(audio_data, rate):
     fft_result = np.fft.fft(audio_data)
     frequencies = np.fft.fftfreq(len(fft_result), d=1/rate)
 
