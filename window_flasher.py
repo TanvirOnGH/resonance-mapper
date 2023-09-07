@@ -1,4 +1,4 @@
-from subprocess import run as exec
+from subprocess import run as execute
 from audio_processor import process_audio
 
 # TODO: Remove reliance on flashfocus
@@ -15,7 +15,7 @@ Intended for Eye-Candy Purposes.
 def main():
     def process_callback(sound_class):
         if sound_class == "bass":
-            exec(FLASH_WINDOW_COMMAND, text=False)
+            execute(FLASH_WINDOW_COMMAND, text=False)
 
     process_audio(process_callback)
 

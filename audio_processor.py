@@ -1,8 +1,8 @@
 import numpy as np
 from audio.stream import initialize_stream
 from audio.manager import AudioManager
-from config import CHUNK_SIZE, FORMAT, CHANNELS, RATE, THRESHOLD
 from audio.classifier import classify_audio
+from config import CHUNK_SIZE, FORMAT, CHANNELS, RATE, THRESHOLD
 
 
 def process_audio(process_callback):
