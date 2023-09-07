@@ -6,6 +6,33 @@ from config import CHUNK_SIZE, FORMAT, CHANNELS, RATE, THRESHOLD
 
 
 def process_audio(process_callback):
+    """
+    Continuously process audio data from an input audio stream.
+
+    This function initializes an audio stream, continuously reads audio chunks,
+    classifies the audio data, and invokes a callback function with the
+    classification result when a significant sound is detected based on a
+    predefined threshold.
+
+    Args:
+        process_callback (callable): A callback function to handle the
+            classification results.
+
+    Example:
+        # Import necessary libraries and modules
+        import numpy as np
+        from audio.stream import initialize_stream
+        from audio.manager import AudioManager
+        from audio.classifier import classify_audio
+        from config import CHUNK_SIZE, FORMAT, CHANNELS, RATE, THRESHOLD
+
+        # Define a callback function to process sound classifications
+        def callback(sound_class):
+            print("Detected Sound Class:", sound_class)
+
+        # Process audio data and invoke the callback
+        process_audio(callback)
+    """
     try:
         with AudioManager() as audio_manager:
             stream = initialize_stream(
@@ -29,7 +56,6 @@ def process_audio(process_callback):
                         if sound_class != previous_classification:
                             previous_classification = sound_class
 
-                            # Call the provided process_callback function
                             process_callback(sound_class)
                     else:
                         pass
