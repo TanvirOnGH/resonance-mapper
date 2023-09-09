@@ -57,8 +57,6 @@ def process_audio(process_callback):
                             previous_classification = sound_class
 
                             process_callback(sound_class)
-                    else:
-                        pass
             except KeyboardInterrupt:
                 pass
             finally:

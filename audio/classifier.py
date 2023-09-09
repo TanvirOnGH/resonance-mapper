@@ -39,5 +39,4 @@ def classify_audio(audio_data, rate):
             (frequencies >= start_freq) & (frequencies <= end_freq)]))
         energy_levels[label] = energy
 
-    dominant_range = max(energy_levels, key=energy_levels.get)
-    return dominant_range
+    return max(energy_levels, key=energy_levels.get)
