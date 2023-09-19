@@ -1,8 +1,8 @@
 from subprocess import run as execute
 from audio_processor import process_audio
 
-# TODO: Remove reliance on flashfocus
-FLASH_WINDOW_COMMAND = "flash_window"  # Requires: flashfocus
+# Requires: https://github.com/TanvirOnGH/window-opacifier
+FLASH_WINDOW_COMMAND = "window-opacifier"
 
 
 def main():
